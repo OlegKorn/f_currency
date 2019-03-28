@@ -1,5 +1,5 @@
 from collections import namedtuple as n 
-from get_currency_data import *
+from get_currency_data import main
 from flask import Flask, render_template, redirect, url_for, request
 
 
@@ -7,9 +7,9 @@ app = Flask(__name__)
 text = "TEST"
 
 @app.route('/', methods=['GET'])
-def main():
+def hello():
     
-    return render_template('index.html', tickers = data) #берем из файла переменную)
+    return render_template('index.html', tickers = main()) #берем из файла переменную)
     
 
 
