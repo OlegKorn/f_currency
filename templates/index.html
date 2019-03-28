@@ -22,6 +22,9 @@
     <section>
       <div class="container-fluid main-section">
         <table class="table table-borderless table-hover">
+
+                   
+
           <thead>
             <tr>
               <th scope="col" class="grey">#</th>
@@ -34,63 +37,21 @@
             </tr>
           </thead>
           <tbody>
-            { % for i in tickers % }
+            {% for i in tickers %}
             <tr>
               <th scope="row" class="grey">1</th>
-              <td class="grey"> {{ i }} </td>
-              <td class="thick">{{ i }}</td>
-              <td>{{ t }}</td>
-              <td>{{ i }}</td>
-              <td>{{ i }}</td>
-              <td>{{ i }}</td>
-            { % endfor %}
+              <td class="grey"> {{ i[0] }} </td>
+              <td class="thick">{{ i[1] }}</td>
+              <td>{{ i[2] }}</td>
+              <td>{{ i[3] }}</td>
+              <td>{{ i[4] }}</td>
+              <td>{{ i[5] }}</td>
             </tr>
-            <tr>
-              <th scope="row" class="grey">1</th>
-              <td class="grey">Код</td>
-              <td class="thick">Номинал</td>
-              <td>Валюта</td>
-              <td>Курс ЦБ</td>
-              <td>Изменения</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <th scope="row" class="grey">1</th>
-              <td class="grey">Код</td>
-              <td class="thick">Номинал</td>
-              <td>Валюта</td>
-              <td>Курс ЦБ</td>
-              <td>Изменения</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <th scope="row" class="grey">1</th>
-              <td class="grey">Код</td>
-              <td class="thick">Номинал</td>
-              <td>Валюта</td>
-              <td>Курс ЦБ</td>
-              <td>Изменения</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <th scope="row" class="grey">1</th>
-              <td class="grey">Код</td>
-              <td class="thick">Номинал</td>
-              <td>Валюта</td>
-              <td>Курс ЦБ</td>
-              <td>Изменения</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <th scope="row" class="grey">1</th>
-              <td class="grey">Код</td>
-              <td class="thick">Номинал</td>
-              <td>Валюта</td>
-              <td>Курс ЦБ</td>
-              <td>Изменения</td>
-              <td>%</td>
-            </tr>
-          </tbody>
+            {% endfor %}
+          </tbody> 
+          
+          
+
         </table>
       </div>
 
