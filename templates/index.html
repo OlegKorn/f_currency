@@ -21,40 +21,36 @@
     <!--main section-->
     <section>
       <div class="container-fluid main-section">
-        <table class="table table-borderless table-hover">
-
-                   
-
+        <table class="table table-striped">
           <thead>
             <tr>
-              <th scope="col" class="grey">#</th>
               <th scope="col" class="grey">Код</th>
               <th scope="col" class="grey">Номинал</th>
               <th scope="col" class="grey">Валюта</th>
               <th scope="col" class="grey">Курс ЦБ</th>
               <th scope="col" class="grey">Изменения</th>
-              <th scope="col" id="procent" class="grey">%</th>
+              <th scope="col" class="grey">%</th>
             </tr>
           </thead>
+
           <tbody>
             {% for i in tickers %}
             <tr>
-              <th scope="row" class="grey">1</th>
               <td class="grey"> {{ i[0] }} </td>
-              <td class="thick">{{ i[1] }}</td>
-              <td>{{ i[2] }}</td>
+              <td class="grey">{{ i[1] }}</td>
+              <td class="thick">{{ i[2] }}</td>
               <td>{{ i[3] }}</td>
-              <td>{{ i[4] }}</td>
-              <td>{{ i[5] }}</td>
+              <td style="color:{%if i[4]|float>0%}green{%else%}red{%endif%};"> 
+                  {{ i[4] }}
+              </td>              
+              <td style="color:{%if i[4]|float>0%}green{%else%}red{%endif%};"> 
+                  {{ i[5] }}
+              </td> 
             </tr>
             {% endfor %}
           </tbody> 
-          
-          
-
         </table>
       </div>
-
     </section>
 
 
@@ -63,7 +59,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    
 
     <!--js-date-->
     <script>
@@ -72,7 +68,6 @@
         var today = ('   ' + '0' + d.getDate()).slice(-2) + '.' +
                     ('0' + (d.getMonth() + 1)).slice(-2) + '.' +
                     d.getFullYear();
-
         document.getElementById('js-date').innerHTML = today;
       };
     </script>
