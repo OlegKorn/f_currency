@@ -1,0 +1,48 @@
+body {
+    font-family: Ubuntu;
+    width: 95%;
+    margin: .5% 2.5% .5% 2.5%;
+}
+
+* {
+    border-radius: 5px;
+}
+header {
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background-color: #073B4C;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+
+}
+  header h1 {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #9395D3;
+  }
+
+.main-section {
+    margin: 3rem 0 !important; 
+    padding: 0 !important;
+}
+
+table .grey {
+    color: #918BBA;
+}
+table .thick {
+    color: #000;
+    font-weight: 900;
+}
+    tr th {
+        text-align: left;
+    }
+        tr th {
+            font-weight: 100;
+        }
+        #procent {
+            text-align: center;
+        }
+
+        tr td:last-child {
+            text-align: center;
+        }

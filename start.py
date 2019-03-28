@@ -1,33 +1,19 @@
-from collections import namedtuple as n
-
+from collections import namedtuple as n 
+from get_currency_data import *
 from flask import Flask, render_template, redirect, url_for, request
 
-message = n('Message', 'text tag')
-messages = []
 
 app = Flask(__name__)
-
+text = "TEST"
 
 @app.route('/', methods=['GET'])
-def hello():
-    return render_template('index.html')
-
-
-@app.route('/main', methods=['GET'])
 def main():
-    return render_template('main.html', messages=messages)
+    
+    return render_template('index.html', tickers = data) #берем из файла переменную)
     
 
-@app.route('/add_message', methods=['POST'])
-def add_message():
-    text = request.form['text']
-    tag = request.form['tag']
-
-    messages.append(message(text, tag))
-    
-    return redirect(url_for('main'))
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=True)
     
