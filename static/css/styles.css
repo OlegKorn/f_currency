@@ -1,31 +1,39 @@
 body {
     font-family: Ubuntu;
-    width: 95%;
-    margin: .5% 2.5% .5% 2.5%;
+    width: 70%;
+    margin: 3% 15%;
 }
 
 * {
     border-radius: 5px;
 }
+
+.color1 {
+    background-color: '';
+}
+
+.color2 {
+    background-color: '';
+}
+
 header {
     justify-content: center;
     align-items: center;
     height: 5rem;
-    background-color: #073B4C;
+    background-color: #AF83A4;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 3px 0 rgba(0, 0, 0, 0.1);
 
 }
   header h1 {
     font-size: 1.75rem;
     font-weight: 900;
-    color: #9395D3;
+    color: #DDD7C6;
   }
 
 .main-section {
     margin: 3rem 0 !important; 
     padding: 0 !important;
 }
-
 table .grey {
     color: #918BBA;
 }
@@ -35,14 +43,14 @@ table .thick {
 }
     tr th {
         text-align: left;
+        font-weight: 100;
     }
-        tr th {
-            font-weight: 100;
-        }
         #procent {
             text-align: center;
         }
-
         tr td:last-child {
+            text-align: center;
+        }
+        .table thead th:last-child {
             text-align: center;
         }
